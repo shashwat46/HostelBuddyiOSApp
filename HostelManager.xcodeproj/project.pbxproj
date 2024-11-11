@@ -32,6 +32,8 @@
 		6BCEC0612CE0CEEB0012AFCC /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEC0602CE0CEEB0012AFCC /* ChatService.swift */; };
 		6BCEC0652CE222530012AFCC /* StudentLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEC0642CE222530012AFCC /* StudentLoginModel.swift */; };
 		6BCEC0672CE223760012AFCC /* StudentLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEC0662CE223760012AFCC /* StudentLoginViewModel.swift */; };
+		6BCEC06B2CE25E310012AFCC /* StudentComplaintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEC06A2CE25E310012AFCC /* StudentComplaintModel.swift */; };
+		6BCEC06D2CE25E990012AFCC /* StudentComplaintViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEC06C2CE25E990012AFCC /* StudentComplaintViewModel.swift */; };
 		6BDA10852C9979490081F36F /* HostelManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA10842C9979490081F36F /* HostelManagerApp.swift */; };
 		6BDA10872C9979490081F36F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA10862C9979490081F36F /* ContentView.swift */; };
 		6BDA10892C99794C0081F36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDA10882C99794C0081F36F /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		6BCEC0602CE0CEEB0012AFCC /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		6BCEC0642CE222530012AFCC /* StudentLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginModel.swift; sourceTree = "<group>"; };
 		6BCEC0662CE223760012AFCC /* StudentLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewModel.swift; sourceTree = "<group>"; };
+		6BCEC06A2CE25E310012AFCC /* StudentComplaintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentComplaintModel.swift; sourceTree = "<group>"; };
+		6BCEC06C2CE25E990012AFCC /* StudentComplaintViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentComplaintViewModel.swift; sourceTree = "<group>"; };
 		6BDA10812C9979490081F36F /* HostelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDA10842C9979490081F36F /* HostelManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelManagerApp.swift; sourceTree = "<group>"; };
 		6BDA10862C9979490081F36F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				6B8B21F72C99ADDC00EDB09B /* StudentComplaintBookView.swift */,
+				6BCEC06A2CE25E310012AFCC /* StudentComplaintModel.swift */,
+				6BCEC06C2CE25E990012AFCC /* StudentComplaintViewModel.swift */,
 			);
 			path = StudentComplaint;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8B21EE2C99964D00EDB09B /* AdminLoginView.swift in Sources */,
+				6BCEC06B2CE25E310012AFCC /* StudentComplaintModel.swift in Sources */,
 				6B8B21F62C99ADC400EDB09B /* StudentHomeView.swift in Sources */,
 				6B8B21F02C99965A00EDB09B /* StudentLoginView.swift in Sources */,
 				6B00382D2C9A83E800BA27A3 /* AdminHomeModel.swift in Sources */,
@@ -326,6 +333,7 @@
 				6B0038152C99CB5400BA27A3 /* PlayGroundView.swift in Sources */,
 				6B0038272C9A815300BA27A3 /* AdminManageComplaintsView.swift in Sources */,
 				6B0038232C9A811A00BA27A3 /* AdminDashboardView.swift in Sources */,
+				6BCEC06D2CE25E990012AFCC /* StudentComplaintViewModel.swift in Sources */,
 				6B0038252C9A812B00BA27A3 /* AdminHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

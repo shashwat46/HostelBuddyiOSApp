@@ -16,4 +16,5 @@ struct StudentLoginRequest: Codable {
 struct StudentLoginResponse: Codable {
     let message: String
     let token: String?
+    let userId: String?
 }
