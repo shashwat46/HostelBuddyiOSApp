@@ -55,6 +55,27 @@ struct StudentHomeView: View {
                 }
             }
             .padding(.top,-40)
+            
+            
+            //ChatIcon
+            
+            NavigationLink(destination : ChatView(), label : {
+                HStack{
+                    Spacer()
+                    
+                    ZStack{
+                        Circle()
+                            .frame(width: 70, height : 70)
+                            .foregroundColor(.yellow)
+                        Image(systemName: "message.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                    }
+                    .padding(20)
+                    .shadow(radius: 8)
+                }
+            })
+            
         }
     
     }
@@ -112,6 +133,7 @@ struct Announcements: View {
             ZStack {
                 Color.yellow
                     .frame(height: 50)
+                    .cornerRadius(10)
                 
                 HStack {
                     Text("Announcements")
@@ -184,6 +206,7 @@ struct RecentComplaints: View {
             ZStack {
                 Color.yellow
                     .frame(height: 50)
+                    .cornerRadius(10)
                 
                 HStack {
                         Text("Recent Complaints")

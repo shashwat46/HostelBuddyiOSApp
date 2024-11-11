@@ -71,6 +71,7 @@ struct StudentLoginView: View {
                     NavigationLink(destination: StudentSignUpView(), isActive: $showingSignUp) {
                         EmptyView() // This is necessary to work with NavigationLink
                     }
+                   
                 }
             }
             .navigationBarHidden(true)

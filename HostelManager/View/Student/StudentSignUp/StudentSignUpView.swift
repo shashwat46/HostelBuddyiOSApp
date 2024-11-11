@@ -94,7 +94,7 @@ struct StudentSignUpView: View {
                     
                     Button("Sign Up") {
                         if password == confirmPassword {
-                            viewModel.register(username: username, email: email, phoneNumber: phoneNumber, roomNumber: roomNumber, hostelBlock: hostelBlock)
+                            viewModel.register(username: username, email: email, password: password, phoneNumber: phoneNumber, roomNumber: roomNumber, hostelBlock: hostelBlock)
                         } else {
                             wrongConfirmPassword = true
                             errorMessage = "Passwords do not match!"
