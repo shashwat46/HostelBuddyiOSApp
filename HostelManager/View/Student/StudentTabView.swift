@@ -16,16 +16,20 @@ struct StudentDashboardView: View {
                 StudentHomeView()
                     .tabItem{
                         Label("Home", systemImage: "house")
+                            
                     }
                 StudentComplaintBookView()
                     .tabItem{
                         Label("Complaint Book", systemImage: "book")
+                            
                     }
                 StudentProfileView()
                     .tabItem{
                         Label("Profile", systemImage: "person")
+                            
                     }
             }
+            .accentColor(.yellow)
             .navigationBarBackButtonHidden(true)
         
     }
