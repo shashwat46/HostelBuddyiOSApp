@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignUpModel: Encodable {
+struct StudentSignUpModel: Encodable {
     let username: String
     let email: String
     let password : String
@@ -16,7 +16,7 @@ struct SignUpModel: Encodable {
     let hostelBlock: String
 }
 
-struct SignUpResponse: Decodable {
+struct StudentSignUpResponse: Decodable {
     let message: String
     let token: String?
     let user: UserData?

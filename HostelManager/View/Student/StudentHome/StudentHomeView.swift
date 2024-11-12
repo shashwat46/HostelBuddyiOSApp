@@ -71,6 +71,7 @@ struct StudentHomeView: View {
                     .padding(20)
                     .shadow(radius: 8)
                 }
+                .background(Color.clear)
             })
         }
     }

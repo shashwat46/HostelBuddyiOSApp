@@ -20,7 +20,7 @@ struct StudentComplaintBookView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Complaint Book")
                                 .font(.title.bold())
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                             Text("Your complaint history")
                                 .fontWeight(.semibold)
                                 .foregroundColor(.gray)
@@ -31,7 +31,7 @@ struct StudentComplaintBookView: View {
                         
                         Image(systemName: "line.horizontal.3")
                             .font(.title)
-                            .foregroundColor(.white)
+                            .foregroundColor(.secondary)
                             .padding(24)
                             .bold()
                     }
@@ -112,9 +112,9 @@ struct StudentComplaintBookView: View {
                     Button(action: {
                         isShowingCreateSheet = true
                     }) {
-                        Image(systemName: "pencil.and.notebook")
+                        Image(systemName: "square.and.pencil")
                             .resizable()
-                            .frame(width: 24, height: 24)
+                            .frame(width: 40, height: 40)
                             .padding()
                             .background(Color.yellow)
                             .foregroundColor(.white)
@@ -123,6 +123,7 @@ struct StudentComplaintBookView: View {
                     }
                     .padding()
                 }
+                .background(Color.clear)
             }
             .sheet(isPresented: $isShowingCreateSheet) {
                 CreateComplaintSheet(isPresented: $isShowingCreateSheet)

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class SignUpViewModel: ObservableObject {
+class StudentSignUpViewModel: ObservableObject {
     @Published var isSignUpSuccessful = false
     @Published var errorMessage = ""
     private var cancellables = Set<AnyCancellable>()
@@ -18,7 +18,7 @@ class SignUpViewModel: ObservableObject {
     @Published var userID: String?
 
     func register(username: String, email: String, password: String, phoneNumber: String, roomNumber: String, hostelBlock: String) {
-        let signUpData = SignUpModel(username: username, email: email, password: password, phoneNumber: phoneNumber, roomNumber: roomNumber, hostelBlock: hostelBlock)
+        let signUpData = StudentSignUpModel(username: username, email: email, password: password, phoneNumber: phoneNumber, roomNumber: roomNumber, hostelBlock: hostelBlock)
         
         guard let url = URL(string: "https://hostel-buddy.onrender.com/api/users/register") else {
             self.errorMessage = "Invalid URL"
@@ -39,7 +39,7 @@ class SignUpViewModel: ObservableObject {
         
         URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: SignUpResponse.self, decoder: JSONDecoder())
+            .decode(type: StudentSignUpResponse.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
