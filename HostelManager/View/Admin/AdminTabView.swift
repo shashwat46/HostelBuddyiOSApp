@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AdminDashboardView: View {
+struct AdminTabView: View {
     
     var body: some View {
         
@@ -20,9 +20,9 @@ struct AdminDashboardView: View {
                 .tabItem {
                     Label("Manage Complaints", systemImage: "exclamationmark.triangle")
                 }
-            AdminProfileView()
+            AnalyticsView()
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label("Profile", systemImage: "list.bullet.rectangle.portrait.fill")
                 }
         }
         .navigationBarBackButtonHidden(true)
@@ -31,7 +31,7 @@ struct AdminDashboardView: View {
 
 struct AdminDashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        AdminDashboardView()
+        AdminTabView()
     }
 }
 

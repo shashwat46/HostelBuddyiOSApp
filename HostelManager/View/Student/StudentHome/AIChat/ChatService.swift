@@ -17,7 +17,7 @@ class ChatService: ObservableObject {
     private(set) var loadingResponse = false
     
     // Your custom API URL
-    private let apiUrl = "https://hostel-buddy.onrender/api/chat"
+    private let apiUrl = "https://hostel-buddy.onrender.com/api/chat"
     
     // Function to send a message to the API and handle the response
     func sendMessage(_ message: String) {

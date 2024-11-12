@@ -1,14 +1,13 @@
-
 //
 //  AdminHomeModel.swift
 //  HostelManager
 //
-//  Created by Shashwat Singh on 19/9/24.
+//  Created by Shashwat Singh on 12/11/24.
 //
 
 import Foundation
 
-// AnnouncementAdmin Struct
+// Announcement Struct for Admin
 struct AnnouncementAdmin: Identifiable, Decodable {
     let id: String
     let title: String
@@ -22,12 +21,15 @@ struct AnnouncementAdmin: Identifiable, Decodable {
     }
 }
 
-// AdminHomeModel to hold Announcements for Admin
-class AdminHomeModel {
-    var announcements: [AnnouncementAdmin]
+
+// User Struct for Complaints
+struct AdminUserModel: Decodable {
+    let id: String
+    let username: String
+    let email: String
     
-    init() {
-        self.announcements = []
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case username, email
     }
 }
-

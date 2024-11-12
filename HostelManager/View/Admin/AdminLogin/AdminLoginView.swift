@@ -88,7 +88,7 @@ struct AdminLoginView: View {
                 case .adminSignUp:
                     AdminSignUpView(navigationPath: $navigationPath)
                 case .adminDashboard:
-                    AdminDashboardView()
+                    AdminTabView()
                 }
             }
         }
