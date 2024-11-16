@@ -23,6 +23,8 @@
 		6B7DE97A2CE8BA160077ABB5 /* AdminMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DE9792CE8BA160077ABB5 /* AdminMenuView.swift */; };
 		6B7DE97E2CE8C3710077ABB5 /* StudentMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DE97D2CE8C3710077ABB5 /* StudentMenuView.swift */; };
 		6B7DE9802CE8C4770077ABB5 /* StudentMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DE97F2CE8C4770077ABB5 /* StudentMenuHeaderView.swift */; };
+		6B7DE9822CE8E5560077ABB5 /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DE9812CE8E5560077ABB5 /* MenuRowView.swift */; };
+		6B7DE9842CE8E8330077ABB5 /* MenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DE9832CE8E8330077ABB5 /* MenuOptionModel.swift */; };
 		6B8B21EC2C99936600EDB09B /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B21EB2C99936600EDB09B /* RoleSelectionView.swift */; };
 		6B8B21EE2C99964D00EDB09B /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B21ED2C99964D00EDB09B /* AdminLoginView.swift */; };
 		6B8B21F02C99965A00EDB09B /* StudentLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B21EF2C99965A00EDB09B /* StudentLoginView.swift */; };
@@ -72,6 +74,8 @@
 		6B7DE9792CE8BA160077ABB5 /* AdminMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenuView.swift; sourceTree = "<group>"; };
 		6B7DE97D2CE8C3710077ABB5 /* StudentMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMenuView.swift; sourceTree = "<group>"; };
 		6B7DE97F2CE8C4770077ABB5 /* StudentMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMenuHeaderView.swift; sourceTree = "<group>"; };
+		6B7DE9812CE8E5560077ABB5 /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
+		6B7DE9832CE8E8330077ABB5 /* MenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionModel.swift; sourceTree = "<group>"; };
 		6B8B21EB2C99936600EDB09B /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
 		6B8B21ED2C99964D00EDB09B /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
 		6B8B21EF2C99965A00EDB09B /* StudentLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				6B7DE97D2CE8C3710077ABB5 /* StudentMenuView.swift */,
 				6B7DE97F2CE8C4770077ABB5 /* StudentMenuHeaderView.swift */,
+				6B7DE9812CE8E5560077ABB5 /* MenuRowView.swift */,
+				6B7DE9832CE8E8330077ABB5 /* MenuOptionModel.swift */,
 			);
 			path = StudentMenu;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				6B8B21F82C99ADDC00EDB09B /* StudentComplaintBookView.swift in Sources */,
 				6BCEC0612CE0CEEB0012AFCC /* ChatService.swift in Sources */,
 				6BCEC0732CE2C43E0012AFCC /* CreateComplaint.swift in Sources */,
+				6B7DE9822CE8E5560077ABB5 /* MenuRowView.swift in Sources */,
 				6BCEC0672CE223760012AFCC /* StudentLoginViewModel.swift in Sources */,
 				6BCEC06F2CE277D80012AFCC /* StudentComplaintDetailView.swift in Sources */,
 				6BC6285D2CE36597009BC5B1 /* AnalyticsView.swift in Sources */,
@@ -433,6 +440,7 @@
 				6B7DE97A2CE8BA160077ABB5 /* AdminMenuView.swift in Sources */,
 				6B8B21F42C99AC2500EDB09B /* StudentTabView.swift in Sources */,
 				6BC628592CE3627B009BC5B1 /* AdminHomeModel.swift in Sources */,
+				6B7DE9842CE8E8330077ABB5 /* MenuOptionModel.swift in Sources */,
 				6B0038212C9A7E0B00BA27A3 /* StudentSignUpModel.swift in Sources */,
 				6BCEC07F2CE334480012AFCC /* AdminSignUpModel.swift in Sources */,
 				6B0038192C9A2D3800BA27A3 /* StudentSignUpView.swift in Sources */,

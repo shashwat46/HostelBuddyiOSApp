@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StudentMenuView: View {
     @Binding var isShowingMenu: Bool
+    @Binding var selectedTab: Int
+    @State private var selectedOption: MenuOptionModel?
     
     var body: some View {
         ZStack{
@@ -19,11 +21,27 @@ struct StudentMenuView: View {
                     .onTapGesture {isShowingMenu.toggle()}
                 
                 HStack{
-                    
                     Spacer()
                     
-                    VStack(alignment: .trailing, spacing: 32) {
+                    VStack(alignment: .leading, spacing: 80)
+                    {
                         StudentMenuHeaderView()
+                        
+                        VStack{
+                            ForEach(MenuOptionModel.allCases){option in
+                                Button(action:{
+                                    selectedOption = option
+                                    
+                                    if option == .profile {
+                                        selectedTab = 2
+                                    }
+                                                                        isShowingMenu.toggle()
+                                }, label : {
+                                    MenuRowView(option: option, selectedOption: $selectedOption)
+                                        .padding(.bottom, 20)
+                                })
+                            }
+                        }
                         
                         Spacer()
                     }
@@ -34,11 +52,13 @@ struct StudentMenuView: View {
                 }
             }
         }
+        .transition(.move(edge: .trailing))
+        .animation(.easeOut, value: isShowingMenu)
     }
 }
 
 struct StudentMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        StudentMenuView(isShowingMenu: .constant(true))
+        StudentMenuView(isShowingMenu: .constant(true), selectedTab: .constant(0))
     }
 }
