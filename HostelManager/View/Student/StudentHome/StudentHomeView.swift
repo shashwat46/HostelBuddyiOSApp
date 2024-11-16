@@ -13,34 +13,6 @@ struct StudentHomeView: View {
     
     var body: some View {
         VStack {
-            // Header Section
-            ZStack {
-                Color.yellow
-                    .frame(height: 140)
-                    .ignoresSafeArea()
-                
-                HStack {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Dashboard")
-                            .font(.title.bold())
-                        Text("Your latest notices")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
-                    
-                    Spacer()
-                    
-                    Image(systemName: "line.horizontal.3")
-                        .font(.title)
-                        .foregroundColor(.gray)
-                        .padding(24)
-                        .bold()
-                }
-                .padding(.horizontal)
-                .padding(.top, -50)
-            }
-            
             // Content Section
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
@@ -53,27 +25,11 @@ struct StudentHomeView: View {
                     Spacer()
                 }
             }
-            .padding(.top, -40)
             
-            // Chat Icon
-            NavigationLink(destination: ChatView(), label: {
-                HStack {
-                    Spacer()
-                    
-                    ZStack {
-                        Circle()
-                            .frame(width: 70, height: 70)
-                            .foregroundColor(.yellow)
-                        Image(systemName: "message.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    }
-                    .padding(20)
-                    .shadow(radius: 8)
-                }
-                .background(Color.clear)
-            })
         }
+        .overlay(
+            ChatIcon().padding(20),
+            alignment: .bottomTrailing)
     }
 }
 
@@ -201,6 +157,23 @@ struct RecentComplaints: View {
         .background(Color.white.opacity(0.7))
         .cornerRadius(10)
         .shadow(radius: 15)
+    }
+}
+
+struct ChatIcon : View {
+    var body : some View {
+        // Chat Icon
+        NavigationLink(destination: ChatView(), label: {
+                ZStack {
+                    Circle()
+                        .frame(width: 70, height: 70)
+                        .foregroundColor(.yellow)
+                    Image(systemName: "message.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                }
+                .shadow(radius: 8)
+        })
     }
 }
 

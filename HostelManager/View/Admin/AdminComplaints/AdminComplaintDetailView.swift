@@ -100,7 +100,7 @@ struct AdminComplaintDetailView: View {
                     Button(action: {
                         // Mark as seen action to be implemented
                     }) {
-                        Text("Mark Issue as Seen")
+                        Text("Mark as Seen")
                             .font(.body)
                             .bold()
                             .foregroundColor(.white)
@@ -166,3 +166,9 @@ struct AdminComplaintDetailView: View {
         return formatter.string(from: date)
     }
 }
+
+//struct Previews_AdminComplaintDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AdminComplaintDetailView(complaint: complaint, isShowingDetail: <#T##Bool#>)
+//    }
+//}

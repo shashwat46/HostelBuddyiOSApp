@@ -12,34 +12,6 @@ struct StudentProfileView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // MARK: HEADER
-            ZStack {
-                Color.yellow
-                    .frame(height: 160)
-                    .ignoresSafeArea(edges : .top)
-
-                HStack {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Your Profile")
-                            .font(.title.bold())
-                        Text("View or Edit details")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.gray)
-                    }
-
-                    Spacer()
-
-                    Image(systemName: "line.horizontal.3")
-                        .font(.title)
-                        .foregroundColor(.gray)
-                        .padding(24)
-                        .bold()
-                }
-                .padding(.horizontal)
-                .padding(.top, -50)
-            }
-            Spacer()
-
             // MARK: CONTENT
             if viewModel.isLoading {
                 ProgressView("Loading...")

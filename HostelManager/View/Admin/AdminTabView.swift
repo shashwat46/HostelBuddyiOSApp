@@ -16,14 +16,17 @@ struct AdminTabView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .accentColor(.yellow)
             AdminManageComplaintsView()
                 .tabItem {
                     Label("Manage Complaints", systemImage: "exclamationmark.triangle")
                 }
+                .tint(.red)
             AnalyticsView()
                 .tabItem {
                     Label("Profile", systemImage: "list.bullet.rectangle.portrait.fill")
                 }
+                .tint(.yellow)
         }
         .navigationBarBackButtonHidden(true)
     }

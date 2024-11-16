@@ -11,38 +11,10 @@ struct StudentComplaintBookView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                // MARK: HEADER
-                ZStack {
-                    Color.yellow
-                        .frame(height: 160)
-                        .ignoresSafeArea()
-                    HStack {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Complaint Book")
-                                .font(.title.bold())
-                                .foregroundColor(.primary)
-                            Text("Your complaint history")
-                                .fontWeight(.semibold)
-                                .foregroundColor(.gray)
-                        }
-                        .padding()
-                        
-                        Spacer()
-                        
-                        Image(systemName: "line.horizontal.3")
-                            .font(.title)
-                            .foregroundColor(.secondary)
-                            .padding(24)
-                            .bold()
-                    }
-                    .padding(.horizontal)
-                    .padding(.top, -50)
-                }
                 
                 // MARK: CONTENT
                 // Search Box
                 SearchBar(text: $viewModel.searchText)
-                    .padding(.top, -30)
                 
                 // Complaints List
                 List(viewModel.filteredComplaints, id: \.id) { complaint in
