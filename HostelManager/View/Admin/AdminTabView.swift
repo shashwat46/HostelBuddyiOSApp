@@ -24,7 +24,7 @@ struct AdminTabView: View {
                 .tint(.red)
             AnalyticsView()
                 .tabItem {
-                    Label("Profile", systemImage: "list.bullet.rectangle.portrait.fill")
+                    Label("Analytics", systemImage: "chart.line.uptrend.xyaxis")
                 }
                 .tint(.yellow)
         }

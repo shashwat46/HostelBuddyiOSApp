@@ -11,6 +11,8 @@ struct StudentMenuView: View {
     @Binding var isShowingMenu: Bool
     @Binding var selectedTab: Int
     @State private var selectedOption: MenuOptionModel?
+    @State private var showLogoutConfirmation = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack{
@@ -35,7 +37,7 @@ struct StudentMenuView: View {
                                     if option == .profile {
                                         selectedTab = 2
                                     }
-                                                                        isShowingMenu.toggle()
+                                    isShowingMenu.toggle()
                                 }, label : {
                                     MenuRowView(option: option, selectedOption: $selectedOption)
                                         .padding(.bottom, 20)
@@ -44,6 +46,27 @@ struct StudentMenuView: View {
                         }
                         
                         Spacer()
+                        
+                        HStack{
+                            
+                            Button {
+                                showLogoutConfirmation = true
+                            } label: {
+                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                                    .tint(.yellow)
+                                
+                                Text("Logout")
+                                    .foregroundColor(.black)
+                            }
+                            .confirmationDialog("Are you sure you want to logout?", isPresented: $showLogoutConfirmation)
+                            {
+                                Button("Yes, Logout", role: .destructive) {
+                                        logout()
+                                    }
+                                Button("Cancel", role: .cancel) { }
+                            }
+                        }
+                        .font(.title2)
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
@@ -55,6 +78,16 @@ struct StudentMenuView: View {
         .transition(.move(edge: .trailing))
         .animation(.easeOut, value: isShowingMenu)
     }
+    
+    private func logout() {
+
+//            username = ""
+//            password = ""
+            
+            // Return to root view
+            presentationMode.wrappedValue.dismiss()
+        }
+
 }
 
 struct StudentMenuView_Previews: PreviewProvider {

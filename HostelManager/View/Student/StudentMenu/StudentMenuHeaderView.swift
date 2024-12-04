@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StudentMenuHeaderView: View {
+    @StateObject private var viewModel = StudentProfileViewModel()
     var body: some View {
         HStack{
             Image(systemName: "person.circle.fill")
@@ -20,10 +21,11 @@ struct StudentMenuHeaderView: View {
             
             VStack(alignment: .leading, spacing: 6)
             {
-                Text("Shashwat Singh")
+                Text(viewModel.name)
                     .font(.subheadline)
+                    .foregroundColor(.primary)
                 
-                Text("Shashwat@gmail.com")
+                Text(viewModel.email)
                     .font(.footnote)
                     .tint(.gray)
             }
