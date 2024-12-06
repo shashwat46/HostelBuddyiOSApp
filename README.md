@@ -1,7 +1,7 @@
 # Hostel Maintenance App
 
 ## Overview
-The **Hostel Maintenance App** is a streamlined solution designed to address the common challenges faced in hostel management, such as complaint tracking, issue resolution, and effective communication between students and administrators. The app features a dual interface for users (students) and admins, offering tools like a complaint book, announcements, analytics, and more. This project aims to improve the efficiency of hostel maintenance and foster a better living environment for students.
+The **Hostel Maintenance App** is an iOS mobile application designed to streamline hostel management by addressing issues like complaint tracking, issue resolution, and communication between students and administrators. Built using SwiftUI and the MVVM architecture, the app provides separate interfaces for students and admins, offering features such as a complaint book, announcements, analytics, and more. This project aims to improve the efficiency of hostel maintenance and foster a better living environment for students.
 
 ## Features
 
@@ -24,36 +24,46 @@ The **Hostel Maintenance App** is a streamlined solution designed to address the
 
 ## Technologies Used
 
-### Frontend:
-- **HTML, CSS, JavaScript**: For building a responsive and user-friendly interface.
+### Mobile App:
+- **SwiftUI**: Used for building a responsive and intuitive user interface.
+- **MVVM Architecture**: Ensures a clean separation of concerns and maintainable code.
+- **State Management**:
+  - **@Published**, **@AppStorage**, and **@StateObject**: Efficiently manage the app's state and user preferences.
+  - **Async/Await**: Enhances app loading times and data processing for a smoother user experience.
 
 ### Backend:
-- **Node.js**: Handles server-side logic and API development.
-- **Express.js**: Provides a lightweight web framework for backend development.
-
-### Database:
+- **Express.js**: Provides the server-side logic for APIs.
 - **MongoDB**: Used for storing user credentials, complaints, announcements, and analytics data.
+- **Backend Repository**: [Hostel-Buddy Backend](https://github.com/ishan0224/Hostel-Buddy.git)
 
 ### APIs:
-- **Custom APIs**: Developed using Postman for functionalities like user authentication, complaint submissions, and analytics retrieval.
-
-### Machine Learning:
-- **Gemini Module**: Integrated for admin-side analytics, providing insights into complaint trends, recurring issues, and average resolution times.
+- **Custom APIs**: Enable functionalities like user authentication, complaint submissions, and analytics retrieval.
 
 ### Tools:
 - **Postman**: For API testing and integration.
 - **Canva**: Used to design the app's visuals for presentations.
 
 ## How to Run the Project
+
+### Mobile App:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/hostel-maintenance-app.git
    ```
-2. Navigate to the project directory:
+2. Open the project in Xcode.
+3. Ensure you have the latest iOS SDK installed.
+4. Build and run the app on a simulator or connected device.
+
+### Backend:
+1. Clone the backend repository:
    ```bash
-   cd hostel-maintenance-app
+   git clone https://github.com/ishan0224/Hostel-Buddy.git
    ```
-3. Install the required dependencies:
+2. Navigate to the backend directory:
+   ```bash
+   cd Hostel-Buddy
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
@@ -61,7 +71,6 @@ The **Hostel Maintenance App** is a streamlined solution designed to address the
    ```bash
    npm start
    ```
-5. Open the app in your browser at `http://localhost:3000`.
 
 ## Contribution Guidelines
 We welcome contributions to improve the app! Please follow these steps:
@@ -71,10 +80,9 @@ We welcome contributions to improve the app! Please follow these steps:
 4. Submit a pull request.
 
 ## Future Scope
-- **Mobile App Integration**: Expand accessibility by creating a mobile version.
 - **Advanced Analytics**: Use machine learning for predictive analytics.
-- **Feedback System**: Allow users to provide feedback on complaint resolutions.
 - **Multi-language Support**: Cater to a broader audience with language options.
+- **Cross-platform Compatibility**: Expand accessibility by developing an Android version.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
